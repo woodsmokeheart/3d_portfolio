@@ -1,7 +1,8 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
-import Island from "../models/island";
+import Island from "../models/Island";
+import Heaven from '../models/Heaven'
 
 {
   /* <div className="absolute top-28 left-0 right-0  z-10 flex items-center justify-center">
@@ -40,6 +41,7 @@ const Home = () => {
             groundColor="#000"
             intensity={1}
           />
+          <Heaven/>
           <Island
             position={islandPosition}
             scale={islandScale}
