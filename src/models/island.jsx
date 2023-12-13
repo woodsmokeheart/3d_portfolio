@@ -14,7 +14,7 @@ import { useFrame } from "@react-three/fiber";
 
 import islandScene from "../assets/3d/island.glb";
 
-function Island({ ...props }) {
+const Island = ({ ...props }) => {
   const ref = useRef();
   const { nodes, materials } = useGLTF(islandScene);
 
@@ -56,6 +56,6 @@ function Island({ ...props }) {
       />
     </a.group>
   );
-}
+};
 
 export default Island;
