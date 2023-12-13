@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 
-import Island from "../models/Island";
+import Land from "../models/Land";
 import Plane from "../models/Plane";
 import Heaven from "../models/Heaven";
 
@@ -62,7 +62,7 @@ const Home = () => {
           />
 
           <Heaven />
-          <Island
+          <Land
             position={islandPosition}
             rotation={[0.1, 4.7077, 0]}
             scale={islandScale}
