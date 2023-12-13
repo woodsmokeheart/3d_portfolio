@@ -20,7 +20,7 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
-  const adjustIslandForScreenSize = () => {
+  const adjustLandForScreenSize = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
@@ -34,15 +34,17 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
+
+
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
-  const [islandScale, islandPosition] = adjustIslandForScreenSize();
+  const [landScale, landPosition] = adjustLandForScreenSize();
 
   return (
     <section className="w-full h-screen relative">
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center"></div>
 
       <Canvas
-        className={'w-full h-screen bg-transparent'}
+        className={"w-full h-screen bg-transparent"}
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense>
@@ -63,9 +65,9 @@ const Home = () => {
 
           <Heaven />
           <Land
-            position={islandPosition}
+            position={landPosition}
             rotation={[0.1, 4.7077, 0]}
-            scale={islandScale}
+            scale={landScale}
           />
           <Plane
             position={biplanePosition}
