@@ -2,9 +2,9 @@ import { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-import skyScene from "../assets/3d/sky.glb";
+import skyScene from "../assets/3d/free_-_skybox_anime_sky.glb";
 
-export function Heaven() {
+export function Skybox() {
   const sky = useGLTF(skyScene);
   const skyRef = useRef();
 
@@ -19,4 +19,4 @@ export function Heaven() {
   );
 }
 
-export default Heaven;
+export default Skybox;

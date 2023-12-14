@@ -1,8 +1,9 @@
 import Home from "./pages/Home";
+import "./App.scss";
 
 const App = () => {
   return (
-    <main className="bg-slate-300/20">
+    <main>
       <Home />
     </main>
   );
