@@ -8,6 +8,7 @@ import Skybox from "../models/Skybox";
 
 import Navbar from "../components/Navbar/Navbar";
 import AboutMe from "../components/Modals/AboutMe/AboutMe";
+import Projects from "../components/Modals/Projects/Projects";
 
 const Home = () => {
   const adjustBiplaneForScreenSize = () => {
@@ -43,6 +44,7 @@ const Home = () => {
 
   // MODALS
   const [isAboutMe, setIsAboutMe] = useState(false);
+  const [isProjects, setIsProjects] = useState(false);
   return (
     <section className={css.wrapper}>
       <Canvas className={css.canvas} camera={{ near: 0.1, far: 1000 }}>
@@ -74,10 +76,21 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
-      <Navbar isAboutMe={isAboutMe} setIsAboutMe={() => setIsAboutMe(true)} />
+      <Navbar
+        isAboutMe={isAboutMe}
+        setIsAboutMe={() => setIsAboutMe(true)}
+        isProjects={isProjects}
+        setIsProjects={() => setIsProjects(true)}
+      />
 
       {Boolean(isAboutMe) && (
         <AboutMe isAboutMe={isAboutMe} onClose={() => setIsAboutMe(false)} />
+      )}
+      {Boolean(isProjects) && (
+        <Projects
+          isProjects={isProjects}
+          onClose={() => setIsProjects(false)}
+        />
       )}
     </section>
   );
