@@ -1,48 +1,43 @@
 import React from "react";
-import css from './Navbar.module.scss'
+import css from "./Navbar.module.scss";
 
-const buttonsData = [
-  {
-    title: "About Me",
-    src: "https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png",
-    alt: "folder-invoices--v1",
-    width: "94",
-    height: "94",
-  },
-  {
-    title: "Project",
-    src: "https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png",
-    alt: "folder-invoices--v1",
-    width: "94",
-    height: "94",
-  },
-  {
-    title: "Contacts",
-    src: "https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png",
-    alt: "folder-invoices--v1",
-    width: "94",
-    height: "94",
-  },
-];
-
-const Navbar = () => {
+const Navbar = ({ isAboutMe, setIsAboutMe }) => {
   return (
     <div className={css.wrapper}>
-      {buttonsData?.map((i, key) => {
-        return (
-          <button key={key} className={css.button}>
-            <img
-              width={i?.width}
-              height={i?.height}
-              src={i?.src}
-              alt={i?.alt}
-            />
-            <p className={css.title}>
-              {i?.title}
-            </p>
-          </button>
-        );
-      })}
+      <>
+        <button className={css.button} onClick={setIsAboutMe}>
+          <img
+            width="94"
+            height="94"
+            src={
+              isAboutMe
+                ? "https://img.icons8.com/3d-fluency/94/opened-folder.png"
+                : "https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png"
+            }
+            alt="folder"
+          />
+
+          <p className={css.title}>About Me</p>
+        </button>
+        <button className={css.button}>
+          <img
+            width="94"
+            height="94"
+            src="https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png"
+            alt="folder"
+          />
+          <p className={css.title}>Projects</p>
+        </button>
+        <button className={css.button}>
+          <img
+            width="94"
+            height="94"
+            src="https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png"
+            alt="folder"
+          />
+          <p className={css.title}>Contacts</p>
+        </button>
+      </>
     </div>
   );
 };

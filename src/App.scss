@@ -29,3 +29,13 @@ button {
     cursor: default;
   }
 }
+
+* ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  width: 0;
+  background-color: transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

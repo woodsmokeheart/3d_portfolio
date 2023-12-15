@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import css from "./Home.module.scss";
 
 import Land from "../models/Land";
@@ -7,6 +7,7 @@ import Plane from "../models/Plane";
 import Skybox from "../models/Skybox";
 
 import Navbar from "../components/Navbar/Navbar";
+import AboutMe from "../components/Modals/AboutMe/AboutMe";
 
 const Home = () => {
   const adjustBiplaneForScreenSize = () => {
@@ -40,12 +41,11 @@ const Home = () => {
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
   const [landScale, landPosition] = adjustLandForScreenSize();
 
+  // MODALS
+  const [isAboutMe, setIsAboutMe] = useState(false);
   return (
     <section className={css.wrapper}>
-      <Canvas
-        className={css.canvas}
-        camera={{ near: 0.1, far: 1000 }}
-      >
+      <Canvas className={css.canvas} camera={{ near: 0.1, far: 1000 }}>
         <Suspense fallback={"Loading..."}>
           <directionalLight position={[1, 1, 1]} intensity={2} />
           <ambientLight intensity={0.5} />
@@ -74,7 +74,11 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
-      <Navbar />
+      <Navbar isAboutMe={isAboutMe} setIsAboutMe={() => setIsAboutMe(true)} />
+
+      {Boolean(isAboutMe) && (
+        <AboutMe isAboutMe={isAboutMe} onClose={() => setIsAboutMe(false)} />
+      )}
     </section>
   );
 };
