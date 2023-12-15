@@ -12,8 +12,8 @@ const Contacts = ({ onClose, isContacts }) => {
         <a href="https://vk.com/my1ncognito" target="_blank" rel="noreferrer">
           <img
             className={css.icon}
-            width="74"
-            height="74"
+            width="60"
+            height="60"
             src="https://img.icons8.com/3d-fluency/94/telegram.png"
             alt="telegram"
           />
@@ -21,8 +21,8 @@ const Contacts = ({ onClose, isContacts }) => {
         <a href="https://vk.com/my1ncognito" target="_blank" rel="noreferrer">
           <img
             className={css.icon}
-            width="84"
-            height="84"
+            width="70"
+            height="70"
             src="https://img.icons8.com/3d-fluency/94/vk-circled.png"
             alt="vk-circled"
           />
@@ -34,8 +34,8 @@ const Contacts = ({ onClose, isContacts }) => {
         >
           <img
             className={css.icon}
-            width="94"
-            height="94"
+            width="80"
+            height="80"
             src="https://img.icons8.com/3d-fluency/94/github.png"
             alt="github"
           />
@@ -43,8 +43,8 @@ const Contacts = ({ onClose, isContacts }) => {
         <a href="https://vk.com/my1ncognito" target="_blank" rel="noreferrer">
           <img
             className={css.icon}
-            width="84"
-            height="84"
+            width="70"
+            height="70"
             src="https://img.icons8.com/3d-fluency/94/twitter-circled.png"
             alt="twitter-circled"
           />
@@ -52,8 +52,8 @@ const Contacts = ({ onClose, isContacts }) => {
         <a href="https://vk.com/my1ncognito" target="_blank" rel="noreferrer">
           <img
             className={css.icon}
-            width="74"
-            height="74"
+            width="60"
+            height="60"
             src="https://img.icons8.com/3d-fluency/94/facebook-circled.png"
             alt="facebook-circled"
           />
