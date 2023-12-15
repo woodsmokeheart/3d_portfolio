@@ -1,7 +1,14 @@
 import React from "react";
 import css from "./Navbar.module.scss";
 
-const Navbar = ({ isAboutMe, setIsAboutMe, isProjects, setIsProjects }) => {
+const Navbar = ({
+  isAboutMe,
+  setIsAboutMe,
+  isProjects,
+  setIsProjects,
+  isContacts,
+  setIsContacts,
+}) => {
   return (
     <div className={css.wrapper}>
       <>
@@ -32,11 +39,15 @@ const Navbar = ({ isAboutMe, setIsAboutMe, isProjects, setIsProjects }) => {
           />
           <p className={css.title}>Projects</p>
         </button>
-        <button className={css.button}>
+        <button className={css.button} onClick={setIsContacts}>
           <img
             width="94"
             height="94"
-            src="https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png"
+            src={
+              isContacts
+                ? "https://img.icons8.com/3d-fluency/94/opened-folder.png"
+                : "https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png"
+            }
             alt="folder"
           />
           <p className={css.title}>Contacts</p>
