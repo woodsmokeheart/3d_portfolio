@@ -6,7 +6,7 @@
   display: block;
   padding: 20px;
   opacity: 0;
-  background-color: rgba(214, 228, 228, 0.7);
+  background-color: rgba(213, 229, 67, 0.7);
   animation: zoomIn 1s ease forwards;
   overflow-y: scroll;
   width: 600px;
@@ -14,7 +14,7 @@
   border-radius: 20px;
   margin: 10px;
   border-radius: 8px;
-  box-shadow: 0 0 30px rgba(126, 227, 231, 0.7);
+  box-shadow: 0 0 30px rgba(216, 162, 36, 0.7);
   transition: all 0.3s ease;
 }
 
@@ -26,9 +26,10 @@
 
 .title {
   font-family: "Rubik Bubbles";
-  letter-spacing: 0.2px;
+  letter-spacing: 2px;
   font-size: 32px;
-  color: rgb(64, 67, 67);
+  color: rgb(255, 255, 255);
+  text-shadow: rgba(0, 0, 0, 0.7) 1px 0 10px;
 }
 
 .btnClose {
@@ -39,9 +40,11 @@
 
 .description {
   font-family: "Rubik Bubbles";
-  letter-spacing: 0.2px;
-  color: rgb(64, 67, 67);
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
   padding: 10px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.7) 1px 0 10px;
 }
 
 @keyframes zoomIn {

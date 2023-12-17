@@ -11,12 +11,14 @@ import AboutMe from "../components/Modals/AboutMe/AboutMe";
 import Projects from "../components/Modals/Projects/Projects";
 import Contacts from "../components/Modals/Contacts/Contacts";
 
+import CurvedTextComponent from "../components/CurvedTextComponent/CurvedTextComponent";
+
 const Home = () => {
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
+      screenScale = [1, 1, 1];
       screenPosition = [0, -1.5, 0];
     } else {
       screenScale = [3, 3, 3];
@@ -30,7 +32,7 @@ const Home = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
-      screenScale = [0.9, 0.9, 0.9];
+      screenScale = [0.5, 0.5, 0.5];
       screenPosition = [0, -6.5, -43.4];
     } else {
       screenScale = [1, 1, 1];
@@ -49,6 +51,7 @@ const Home = () => {
   const [isContacts, setIsContacts] = useState(false);
   return (
     <section className={css.wrapper}>
+      <CurvedTextComponent />
       <Canvas className={css.canvas} camera={{ near: 0.1, far: 1000 }}>
         <Suspense fallback={"Loading..."}>
           <directionalLight position={[1, 1, 1]} intensity={2} />

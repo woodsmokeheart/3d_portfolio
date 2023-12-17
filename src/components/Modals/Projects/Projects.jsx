@@ -20,10 +20,10 @@ const Projects = ({ onClose, isProjects }) => {
         <h1 className={css.title}>Projects</h1>
         <button className={css.btnClose} onClick={onClose}>
           <img
-            width="70"
-            height="70"
-            src="https://img.icons8.com/3d-fluency/94/cat-footprint.png"
-            alt="cat-footprint"
+            width="50"
+            height="50"
+            src="https://img.icons8.com/3d-fluency/188/delete-sign.png"
+            alt="delete-sign"
           />
         </button>
       </div>

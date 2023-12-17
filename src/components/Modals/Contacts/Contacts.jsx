@@ -9,7 +9,7 @@ const Contacts = ({ onClose, isContacts }) => {
       classNames={(css.wrapper, isContacts && css.isOpen)}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
-        <a href="https://vk.com/my1ncognito" target="_blank" rel="noreferrer">
+        <a href="https://t.me/my1ncognito" target="_blank" rel="noreferrer">
           <img
             className={css.icon}
             width="60"
@@ -40,7 +40,11 @@ const Contacts = ({ onClose, isContacts }) => {
             alt="github"
           />
         </a>
-        <a href="https://vk.com/my1ncognito" target="_blank" rel="noreferrer">
+        <a
+          href="https://twitter.com/my1ncognito"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             className={css.icon}
             width="70"

@@ -1,0 +1,101 @@
+// CurvedText.module.scss
+
+.curvedTextContainer {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: zoomIn 4s ease forwards;
+}
+
+.secondChar {
+  margin-bottom: 17px;
+}
+
+.threeChar {
+  margin-bottom: 30px;
+}
+
+.fourChar {
+  margin-bottom: 36px;
+}
+
+.letter {
+  font-style: normal;
+  font-size: 140px;
+  text-transform: uppercase;
+  font-family: "Rubik Bubbles";
+  letter-spacing: 2px;
+  color: white;
+  font-weight: bold;
+  animation: bounce 1.8s infinite ease-in-out;
+  text-shadow: #ffd400 1px 0 10px;
+}
+.letter:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.letter:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.letter:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.letter:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.letter:nth-child(5) {
+  animation-delay: 1.5s;
+}
+.letter:nth-child(6) {
+  animation-delay: 1.8s;
+}
+.letter:nth-child(7) {
+  animation-delay: 2.1s;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-1px);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .letter {
+    font-size: 55px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .letter {
+    font-size: 75px;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
