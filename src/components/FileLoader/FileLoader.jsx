@@ -6,11 +6,14 @@ const FileLoader = () => {
     <div className={css.loader}>
       <div className={css.animationWrapper}>
         <div className={css.letter}>P</div>
-        <div className={css.letter}>L</div>
-        <div className={css.letter}>A</div>
-        <div className={css.letter}>Y</div>
-        <div className={css.letter}>E</div>
+        <div className={css.letter}>O</div>
         <div className={css.letter}>R</div>
+        <div className={css.letter}>T</div>
+        <div className={css.letter}>F</div>
+        <div className={css.letter}>O</div>
+        <div className={css.letter}>L</div>
+        <div className={css.letter}>I</div>
+        <div className={css.letter}>O</div>
       </div>
       <span className={css.text}>waiting for download</span>
     </div>
