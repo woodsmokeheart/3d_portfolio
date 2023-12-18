@@ -14,43 +14,27 @@ const Navbar = ({
       <>
         <button className={css.button} onClick={setIsAboutMe}>
           <img
-            width="94"
-            height="94"
-            src={
-              isAboutMe
-                ? "https://img.icons8.com/3d-fluency/94/opened-folder.png"
-                : "https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png"
-            }
-            alt="folder"
+            width="100"
+            height="100"
+            src="https://img.icons8.com/clouds/100/a.png"
+            alt="a"
           />
-
-          <p className={css.title}>About Me</p>
         </button>
         <button className={css.button} onClick={setIsProjects}>
           <img
-            width="94"
-            height="94"
-            src={
-              isProjects
-                ? "https://img.icons8.com/3d-fluency/94/opened-folder.png"
-                : "https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png"
-            }
-            alt="folder"
+            width="100"
+            height="100"
+            src="https://img.icons8.com/clouds/100/p.png"
+            alt="p"
           />
-          <p className={css.title}>Projects</p>
         </button>
         <button className={css.button} onClick={setIsContacts}>
           <img
-            width="94"
-            height="94"
-            src={
-              isContacts
-                ? "https://img.icons8.com/3d-fluency/94/opened-folder.png"
-                : "https://img.icons8.com/3d-fluency/94/folder-invoices--v1.png"
-            }
-            alt="folder"
+            width="100"
+            height="100"
+            src="https://img.icons8.com/clouds/100/c.png"
+            alt="c"
           />
-          <p className={css.title}>Contacts</p>
         </button>
       </>
     </div>

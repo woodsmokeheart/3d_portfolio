@@ -1,10 +1,12 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState } from "react";
+import { Suspense, useState, useRef, useEffect } from "react";
 import css from "./Home.module.scss";
 
 import Land from "../models/Land";
 import Plane from "../models/Plane";
 import Skybox from "../models/Skybox";
+
+import sakura from "../assets/sakura.mp3";
 
 import Navbar from "../components/Navbar/Navbar";
 import AboutMe from "../components/Modals/AboutMe/AboutMe";
@@ -49,6 +51,23 @@ const Home = () => {
   const [isAboutMe, setIsAboutMe] = useState(false);
   const [isProjects, setIsProjects] = useState(false);
   const [isContacts, setIsContacts] = useState(false);
+
+  // AUDIO
+  const audioRef = useRef(new Audio(sakura));
+  audioRef.current.volume = 0.4;
+  audioRef.current.loop = true;
+
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+  useEffect(() => {
+    if (isPlayingMusic) {
+      audioRef.current.play();
+    }
+
+    return () => {
+      audioRef.current.pause();
+    };
+  }, [isPlayingMusic]);
   return (
     <section className={css.wrapper}>
       <CurvedTextComponent />
@@ -105,6 +124,25 @@ const Home = () => {
           onClose={() => setIsContacts(false)}
         />
       )}
+      <button className={css.play}>
+        {!isPlayingMusic ? (
+          <img
+            width="50"
+            height="50"
+            src="https://img.icons8.com/clouds/100/play.png"
+            alt="play"
+            onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+          />
+        ) : (
+          <img
+            width="50"
+            height="50"
+            src="https://img.icons8.com/clouds/100/pause.png"
+            alt="pause"
+            onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+          />
+        )}
+      </button>
     </section>
   );
 };

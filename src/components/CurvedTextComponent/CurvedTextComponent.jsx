@@ -6,15 +6,14 @@ const CurvedTextComponent = () => {
   return (
     <div className={css.wrapper}>
       <div className={css.curvedTextContainer}>
-        <p className={css.letter}>w</p>
-        <p className={cn(css.secondChar, css.letter)}>e</p>
-        <p className={cn(css.threeChar, css.letter)}>l</p>
-        <p className={cn(css.fourChar, css.letter)}>c</p>
-        <p className={cn(css.threeChar, css.letter)}>o</p>
-        <p className={cn(css.secondChar, css.letter)}>m</p>
-        <p className={css.letter}>e</p>
+        <img src="https://img.icons8.com/clouds/100/w.png" alt="w" />
+        <img src="https://img.icons8.com/clouds/100/e.png" alt="e" />
+        <img src="https://img.icons8.com/clouds/100/l.png" alt="l" />
+        <img src="https://img.icons8.com/clouds/100/c.png" alt="c" />
+        <img src="https://img.icons8.com/clouds/100/o.png" alt="o" />
+        <img src="https://img.icons8.com/clouds/100/m.png" alt="m" />
+        <img src="https://img.icons8.com/clouds/100/e.png" alt="e" />
       </div>
-      {/* <div className={css.subText}>to my world</div> */}
     </div>
   );
 };
