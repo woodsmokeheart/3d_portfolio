@@ -1,6 +1,4 @@
-// CurvedText.module.scss
-
-.curvedTextContainer {
+.wrapper {
   position: absolute;
   top: 30px;
   left: 0;
@@ -8,84 +6,150 @@
   z-index: 999;
   background-color: transparent;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   animation: zoomIn 4s ease forwards;
 }
 
-.secondChar {
-  margin-bottom: 17px;
-}
-
-.threeChar {
-  margin-bottom: 30px;
-}
-
-.fourChar {
-  margin-bottom: 36px;
+.curvedTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .letter {
   font-style: normal;
-  font-size: 140px;
+  font-size: 100px;
   text-transform: uppercase;
   font-family: "Rubik Bubbles";
   letter-spacing: 2px;
   color: white;
   font-weight: bold;
-  animation: bounce 1.8s infinite ease-in-out;
   text-shadow: #ffd400 1px 0 10px;
 }
+
 .letter:nth-child(1) {
-  animation-delay: 0.3s;
+  transform: rotate(-40deg);
 }
 
 .letter:nth-child(2) {
-  animation-delay: 0.6s;
+  transform: rotate(-33deg);
+  margin-bottom: 53px;
 }
 
 .letter:nth-child(3) {
-  animation-delay: 0.9s;
+  transform: rotate(-23deg);
+  margin-right: 10px;
+  margin-bottom: 89px;
 }
 
 .letter:nth-child(4) {
-  animation-delay: 1.2s;
+  margin-right: 4px;
+  margin-bottom: 100px;
 }
 .letter:nth-child(5) {
-  animation-delay: 1.5s;
+  transform: rotate(19deg);
+  margin-bottom: 92px;
 }
 .letter:nth-child(6) {
-  animation-delay: 1.8s;
+  transform: rotate(32deg);
+  margin-bottom: 55px;
 }
 .letter:nth-child(7) {
-  animation-delay: 2.1s;
+  transform: rotate(40deg);
 }
 
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-3px);
-  }
-  60% {
-    transform: translateY(-1px);
-  }
+.subText {
+  font-style: normal;
+  font-size: 140px;
+  text-transform: uppercase;
+  font-family: "Cabin";
+  letter-spacing: 2px;
+  color: white;
+  font-weight: bold;
+  text-shadow: #ffd400 1px 0 10px;
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
+  .wrapper {
+    top: 13%;
+  }
   .letter {
     font-size: 55px;
+  }
+  .subText {
+    font-size: 35px;
+  }
+  .letter:nth-child(1) {
+    transform: rotate(-40deg);
+  }
+
+  .letter:nth-child(2) {
+    transform: rotate(-25deg);
+    margin-bottom: 27px;
+    margin-right: 4px;
+  }
+
+  .letter:nth-child(3) {
+    transform: rotate(-15deg);
+    margin-right: 4px;
+    margin-bottom: 43px;
+  }
+
+  .letter:nth-child(4) {
+    margin-right: 4px;
+    margin-bottom: 49px;
+  }
+  .letter:nth-child(5) {
+    transform: rotate(15deg);
+    margin-bottom: 43px;
+  }
+  .letter:nth-child(6) {
+    transform: rotate(25deg);
+    margin-bottom: 27px;
+  }
+  .letter:nth-child(7) {
+    transform: rotate(40deg);
   }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
   .letter {
     font-size: 75px;
+  }
+  .subText {
+    font-size: 75px;
+  }
+  .letter:nth-child(1) {
+    transform: rotate(-40deg);
+  }
+
+  .letter:nth-child(2) {
+    transform: rotate(-25deg);
+    margin-bottom: 27px;
+    margin-right: 4px;
+  }
+
+  .letter:nth-child(3) {
+    transform: rotate(-15deg);
+    margin-right: 4px;
+    margin-bottom: 43px;
+  }
+
+  .letter:nth-child(4) {
+    margin-right: 4px;
+    margin-bottom: 49px;
+  }
+  .letter:nth-child(5) {
+    transform: rotate(15deg);
+    margin-bottom: 43px;
+  }
+  .letter:nth-child(6) {
+    transform: rotate(25deg);
+    margin-bottom: 27px;
+  }
+  .letter:nth-child(7) {
+    transform: rotate(40deg);
   }
 }
 
